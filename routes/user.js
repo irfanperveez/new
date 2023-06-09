@@ -5,7 +5,7 @@ var jwt = require('jsonwebtoken');
 const JWT_SECRET = 'abc';
 
 
-// ROUTE 1: Create a user account using: POST "/api/user/createuser". 
+// ROUTE 1: Create a user account by using: POST "/api/user/createuser". 
 router.post('/createuser', async (req, res) => {
     
     try {

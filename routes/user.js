@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     try {
         let user = await User.findOne({
             where: {
-                phoneNumber: { [Op.like]: phoneNumber }
+                phoneNumber: { [Op.eq]: phoneNumber }
             }
         });
         if (!user) {

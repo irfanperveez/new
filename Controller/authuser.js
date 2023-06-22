@@ -11,6 +11,7 @@ const JWT_SECRET = 'abc';
   try {
     const data = jwt.verify(token, JWT_SECRET);
     req.user = data; // Attach the authenticated user to the request object
+    console.log(req.user);
     next(); // Pass control to the next middleware or route handler
   } catch (error) {
     res.status(401).send({ error: 'Please authenticate using a correct token' });

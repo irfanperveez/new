@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const User = require('../Model/User');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 var jwt = require('jsonwebtoken');
 const JWT_SECRET = 'abc';
 const authMiddleware = require('./authuser');
+
+
 
 // ROUTE 1: Create a user account using: POST "/api/user/createuser". 
 router.post('/createuser', async (req, res) => {
@@ -137,5 +138,7 @@ router.post('/profiles_post', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
+
+  module.exports = router;
 
 

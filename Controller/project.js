@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
-const Project = require('../Model/Project')
+
 
 // ROUTE 1: Create a project  using: POST "/api/project/createuser". 
 router.post('/createproject', async (req, res) => {
@@ -127,12 +127,6 @@ router.get('/projectdetails', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
-
-
-
-  
-  
-
 module.exports = router;
 
 
